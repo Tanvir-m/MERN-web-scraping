@@ -12,7 +12,7 @@ const UserPost = () => {
 
   const submitClickHandler = async () => {
     try {
-      const res = await axios.post(`http://localhost:8000/api/fetch-data/`, {
+      const res = await axios.post(`/api/fetch-data/`, {
         data,
       });
       console.log('res', res.data);
@@ -33,7 +33,7 @@ const UserPost = () => {
 
   const postClickHandler = async () => {
     try {
-      await axios.post('http://localhost:8000/api/add/', {
+      await axios.post('/api/add/', {
         title: webDetails[0].title,
         meta: webDetails[0]?.meta,
         fbImg: webDetails[0]?.fbImg,

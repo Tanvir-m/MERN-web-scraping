@@ -11,10 +11,7 @@ const ContextCom = (props) => {
   // user login details
   const loginClickHandler = async (state, setDetails) => {
     try {
-      const res = await axios.post(
-        'http://localhost:8000/api/auth/login',
-        state
-      );
+      const res = await axios.post('/api/auth/login', state);
       setDetails(res.data);
       //   console.log(res.data);
       if (res.data) {

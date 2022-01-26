@@ -26,7 +26,7 @@ const SignUp = () => {
       alert('Please fill the all details');
     }
     try {
-      await axios.post('http://localhost:8000/api/auth/register', state);
+      await axios.post('/api/auth/register', state);
     } catch (err) {
       console.log('error in sign up');
     }
